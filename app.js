@@ -111,6 +111,63 @@
     }
   }
 
+  // Newsletter, donation, and sponsors, all driven by data/site.json.
+  // Anything left blank there stays hidden on the page.
+  function show(id) { const n = document.getElementById(id); if (n) n.hidden = false; return n; }
+
+  function renderSite(site) {
+    site = site || {};
+    const newsletter = safeUrl(site.newsletterUrl || '');
+    const donate = safeUrl(site.donationUrl || '');
+    const footer = document.getElementById('footer-links');
+
+    function footerLink(text, href) {
+      const a = el('a', null, text);
+      a.href = href; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      if (footer.childNodes.length) footer.appendChild(document.createTextNode(' · '));
+      footer.appendChild(a);
+      footer.hidden = false;
+    }
+
+    if (site.newsletterUrl && newsletter) {
+      show('support'); show('newsletter-box'); show('nav-subscribe');
+      document.getElementById('newsletter-blurb').textContent = site.newsletterBlurb || '';
+      document.getElementById('subscribe-button').href = newsletter;
+      footerLink('Subscribe', newsletter);
+    }
+    if (site.donationUrl && donate) {
+      show('support'); show('donate-box');
+      document.getElementById('donate-blurb').textContent = site.donationBlurb || '';
+      document.getElementById('donate-button').href = donate;
+      footerLink('Support this site', donate);
+    }
+    const sponsors = Array.isArray(site.sponsors) ? site.sponsors.filter(s => s && s.name) : [];
+    const list = document.getElementById('sponsor-list');
+    for (const s of sponsors) {
+      const href = s.url ? safeUrl(s.url) : null;
+      const item = el(href ? 'a' : 'div', 'sponsor');
+      if (href) { item.href = href; item.target = '_blank'; item.rel = 'noopener noreferrer sponsored'; }
+      const logo = safeImage(s.logo);
+      if (logo) {
+        const i = el('img'); i.src = logo; i.alt = s.name + ' logo'; i.loading = 'lazy';
+        item.appendChild(i);
+      }
+      item.appendChild(el('strong', null, s.name));
+      if (s.blurb) item.appendChild(el('span', null, s.blurb));
+      list.appendChild(item);
+    }
+
+    const contact = (site.sponsorContact || '').trim();
+    let contactHref = null;
+    if (/^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]+$/.test(contact)) contactHref = 'mailto:' + contact;
+    else if (contact) contactHref = safeUrl(contact);
+    if (contactHref) {
+      document.getElementById('sponsor-contact').href = contactHref;
+      show('sponsor-cta');
+    }
+    if (sponsors.length || contactHref) show('sponsors');
+  }
+
   function wireControls() {
     let t;
     document.getElementById('search').addEventListener('input', ev => {
@@ -134,10 +191,15 @@
   document.addEventListener('DOMContentLoaded', async () => {
     wireControls();
     try {
-      const [e, n] = await Promise.all([load('/data/entries.json'), load('/data/news.json')]);
+      const [e, n, s] = await Promise.all([
+        load('/data/entries.json'),
+        load('/data/news.json'),
+        load('/data/site.json').catch(() => ({}))
+      ]);
       entries = e;
       renderEntries();
       renderNews(n);
+      renderSite(s);
     } catch (err) {
       document.getElementById('entries').appendChild(
         el('p', 'note', 'Could not load content. If you opened the file directly, run a local server instead (see README).'));
