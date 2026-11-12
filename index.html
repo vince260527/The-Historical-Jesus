@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Historical sources, archaeological finds, and manuscript evidence relating to the historical Jesus of Nazareth.">
+  <title>VSC · The Historical Jesus: Sources &amp; Evidence</title>
+  <link rel="icon" href="/images/vsc-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <img class="logo" src="/images/vsc-logo.svg" alt="VSC logo" width="110" height="110">
+    <h1>The Historical Jesus</h1>
+    <p class="tagline">Ancient texts, archaeology, and manuscripts relating to Jesus of Nazareth and the world of the Gospels</p>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#news">In the News</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#further-reading">Further Reading</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About This Collection</h2>
+      <p>Almost all historians, whatever their religious views, agree that Jesus of Nazareth existed. Most also accept that he was baptized by John the Baptist and crucified under the Roman prefect Pontius Pilate. This site gathers the main ancient evidence behind that agreement.</p>
+      <p class="note"><strong>A note on scope:</strong> historical evidence can confirm people, places, and events. It cannot settle faith claims such as the resurrection or Jesus' divinity, so those questions are left to theology and personal conviction.</p>
+    </section>
+
+    <section id="news">
+      <h2>In the News</h2>
+      <p class="hint">Recent media coverage. News reports often go further than the archaeologists themselves, so check the original announcements.</p>
+      <div id="news-list"></div>
+    </section>
+
+    <section id="evidence">
+      <h2>The Evidence</h2>
+      <div class="controls">
+        <label for="search" class="visually-hidden">Search the evidence</label>
+        <input id="search" type="search" placeholder="Search, e.g. Pilate, ossuary, Josephus…" autocomplete="off">
+        <div class="filters" role="group" aria-label="Filter by category">
+          <button type="button" class="chip active" data-section="">All</button>
+          <button type="button" class="chip" data-section="Non-Christian Writers">Non-Christian Writers</button>
+          <button type="button" class="chip" data-section="Archaeology">Archaeology</button>
+          <button type="button" class="chip" data-section="Manuscripts">Manuscripts</button>
+          <button type="button" class="chip" data-section="Earliest Christian Texts">Earliest Christian Texts</button>
+        </div>
+        <div class="filters" role="group" aria-label="Filter by scholarly status">
+          <button type="button" class="chip badge-chip active" data-badge="">Any status</button>
+          <button type="button" class="chip badge-chip" data-badge="Widely accepted"><span class="badge strong">Widely accepted</span></button>
+          <button type="button" class="chip badge-chip" data-badge="Debated"><span class="badge debated">Debated</span></button>
+          <button type="button" class="chip badge-chip" data-badge="Context"><span class="badge context">Context</span></button>
+        </div>
+        <p id="count" class="hint" aria-live="polite"></p>
+      </div>
+      <div id="entries">
+        <noscript><p class="note">Please enable JavaScript to view and search the evidence.</p></noscript>
+      </div>
+    </section>
+
+    <section id="further-reading">
+      <h2>Further Reading</h2>
+      <p>These books come from authors across the spectrum, from skeptical to devout:</p>
+      <ul>
+        <li>Bart D. Ehrman, <cite>Did Jesus Exist? The Historical Argument for Jesus of Nazareth</cite> (2012)</li>
+        <li>John P. Meier, <cite>A Marginal Jew: Rethinking the Historical Jesus</cite> (multi-volume)</li>
+        <li>E. P. Sanders, <cite>The Historical Figure of Jesus</cite> (1993)</li>
+        <li>Robert E. Van Voorst, <cite>Jesus Outside the New Testament</cite> (2000)</li>
+        <li>Craig A. Evans, <cite>Jesus and His World: The Archaeological Evidence</cite> (2012)</li>
+        <li>Richard Bauckham, <cite>Jesus and the Eyewitnesses</cite> (2006; 2nd ed. 2017)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <img src="/images/vsc-logo.svg" alt="" width="36" height="36">
+    <p>Compiled by VSC for educational purposes. Dates are approximate and reflect mainstream scholarship. Photos are from Wikimedia Commons and are credited under each image.</p>
+  </footer>
+</body>
+</html>
