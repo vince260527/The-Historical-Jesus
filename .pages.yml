@@ -1,0 +1,139 @@
+ media:
+    input: images
+    output: /images
+
+  content:
+    - name: entries
+      label: Evidence entries
+      type: file
+      path: data/entries.json
+      format: json
+      list: true
+      fields:
+        - name: section
+          label: Section
+          type: select
+          options:
+            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
+      format: json
+      list: true
+      fields:
+        - name: section
+          label: Section
+          type: select
+          options:
+            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
+        - name: title
+          label: Title
+          type: string
+
+  content:
+    - name: entries
+      label: Evidence entries
+      type: file
+      path: data/entries.json
+      format: json
+      list: true
+      fields:
+        - name: section
+          label: Section
+          type: select
+          options:
+        - name: section
+          label: Section
+          type: select
+          options:
+            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
+        - name: title
+      type: file
+      path: data/entries.json
+      format: json
+      list: true
+      fields:
+        - name: section
+          label: Section
+          type: select
+          options:
+            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
+        - name: section
+          label: Section
+          type: select
+          options:
+          type: select
+          options:
+            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
+        - name: title
+          label: Title
+          type: string
+          type: select
+          options:
+            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
+        - name: title
+          label: Title
+          type: string
+        - name: badge
+      format: json
+      list: true
+      fields:
+        - name: section
+          label: Section
+          type: select
+          options:
+            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
+        - name: title
+          label: Title
+          type: select
+          options:
+            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
+        - name: title
+          label: Title
+          type: string
+        - name: badge
+          label: Scholarly status
+          type: select
+          options:
+            values: [Widely accepted, Debated, Context]
+        - name: meta
+          label: Author / date / location line
+          type: string
+        - name: summary
+          label: Summary
+          type: text
+        - name: significance
+          label: Significance
+          type: text
+        - name: image
+          label: Image (optional)
+          type: image
+        - name: imageAlt
+          label: Image description (for screen readers)
+          type: string
+        - name: credit
+          label: Photo credit and license
+          type: string
+        - name: creditUrl
+          label: Photo source link
+          type: string
+
+    - name: news
+      label: News articles
+      type: file
+      path: data/news.json
+      format: json
+      list: true
+      fields:
+        - name: title
+          label: Headline
+          type: string
+        - name: outlet
+          label: Outlet (e.g. Fox News)
+          type: string
+        - name: date
+          label: Publication date
+          type: date
+        - name: url
+          label: Link
+          type: string
+        - name: summary
+          label: Short summary
+          type: text
