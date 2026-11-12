@@ -135,5 +135,44 @@
           label: Link
           type: string
         - name: summary
+   - name: site
+      label: Newsletter, donations & sponsors
+      type: file
+      path: data/site.json
+      format: json
+      fields:
+        - name: newsletterUrl
+          label: Buttondown signup link (e.g. https://buttondown.com/yourname). Leave blank to hide.
+          type: string
+        - name: newsletterBlurb
+          label: Newsletter description
+          type: text
+        - name: donationUrl
+          label: Donation link (Buy Me a Coffee, Ko-fi, GitHub Sponsors…). Leave blank to hide.
+          type: string
+        - name: donationBlurb
+          label: Donation description
+          type: text
+        - name: sponsorContact
+          label: Sponsorship contact (email or link). Leave blank to hide.
+          type: string
+        - name: sponsors
+          label: Sponsors
+          type: object
+          list: true
+          fields:
+            - name: name
+              label: Sponsor name
+              type: string
+            - name: url
+              label: Website link
+              type: string
+            - name: logo
+              label: Logo (optional)
+              type: image
+            - name: blurb
+              label: Short description (optional)
+              type: string
+       
           label: Short summary
           type: text
