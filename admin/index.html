@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin · VSC The Historical Jesus</title>
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/admin/admin.js" defer></script>
+</head>
+<body class="admin">
+  <header class="hero admin-hero">
+    <h1>Site Admin</h1>
+    <p class="tagline">Moderate comments and read advertising inquiries</p>
+  </header>
+  <main>
+    <section id="login" hidden>
+      <h2>Sign in</h2>
+      <p>Enter your admin password. (If you set up Cloudflare Access, you won't see this step.)</p>
+      <div class="admin-login">
+        <label for="pw" class="visually-hidden">Admin password</label>
+        <input id="pw" type="password" autocomplete="current-password" placeholder="Admin password">
+        <button type="button" class="button" id="pw-go">Sign in</button>
+      </div>
+      <p class="hint" id="login-msg" aria-live="polite"></p>
+    </section>
+
+    <div id="panels" hidden>
+      <div class="filters admin-tabs" role="tablist">
+        <button type="button" class="chip active" data-tab="comments">Comments <span id="c-count"></span></button>
+        <button type="button" class="chip" data-tab="messages">Advertising messages <span id="m-count"></span></button>
+        <a class="chip" href="/" target="_blank" rel="noopener">View site ↗</a>
+      </div>
+
+      <section id="tab-comments">
+        <h2>Comments</h2>
+        <p class="hint">Comments marked <strong>Waiting for approval</strong> or with reports are listed first. <strong>Approve</strong> makes a comment public, <strong>Hide</strong> takes it off the site but keeps it here, and <strong>Delete</strong> removes it permanently.</p>
+        <div id="comment-admin-list"></div>
+      </section>
+
+      <section id="tab-messages" hidden>
+        <h2>Advertising messages</h2>
+        <p class="hint">Messages from the "Advertise with us" form. Only you can see these. Reply from your own email.</p>
+        <div id="message-admin-list"></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

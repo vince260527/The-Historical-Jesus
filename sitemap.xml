@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://the-historical-jesus.pages.dev/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/pilate-stone.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/caiaphas-ossuary.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/temple-warning.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/pool-of-siloam.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/pool-of-bethesda.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/magdala-synagogue.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/capernaum.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/galilee-boat.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/james-ossuary.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/p52.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/p46.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/codex-sinaiticus.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/codex-vaticanus.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/shroud-of-turin.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/sudarium-oviedo.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/kiriath-jearim.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/tel-shiloh.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/aksum-chapel.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/arch-of-titus.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/tel-dan-stele.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/mesha-stele.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/siloam-inscription.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/ketef-hinnom.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/dead-sea-scrolls.jpg</image:loc></image:image>
+    <image:image><image:loc>https://the-historical-jesus.pages.dev/images/lachish-relief.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://the-historical-jesus.pages.dev/advertising.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

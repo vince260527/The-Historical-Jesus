@@ -1,17 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="t">
-  <title id="t">VSC</title>
+  <title id="t">VSC · The Historical Jesus</title>
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#b07a3c"/>
-      <stop offset="1" stop-color="#7a4a1f"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4b4a2a"/><stop offset="1" stop-color="#1f1912"/>
     </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e2b65b"/><stop offset="1" stop-color="#a87a2a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd27a" stop-opacity="0.55"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <circle cx="100" cy="100" r="96" fill="url(#g)"/>
-  <circle cx="100" cy="100" r="86" fill="none" stroke="#f3e6cf" stroke-width="2"/>
-  <circle cx="100" cy="100" r="80" fill="none" stroke="#f3e6cf" stroke-width="0.8" stroke-dasharray="2 4"/>
-  <!-- small cross above the monogram -->
-  <path d="M100 34 v26 M91 43 h18" stroke="#f3e6cf" stroke-width="4" stroke-linecap="round"/>
-  <text x="100" y="122" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" letter-spacing="3" fill="#fdf8ef">VSC</text>
-  <!-- laurel-style underline -->
-  <path d="M58 140 Q100 158 142 140" fill="none" stroke="#f3e6cf" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="100" cy="100" r="97" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#c8973a" stroke-width="2"/>
+  <!-- glow and flame -->
+  <circle cx="148" cy="62" r="26" fill="url(#glow)"/>
+  <path d="M148 50 C141 61 141 70 148 76 C155 70 155 61 148 50 Z" fill="#ffcf6b"/>
+  <path d="M148 60 C145 66 145 70 148 73 C151 70 151 66 148 60 Z" fill="#fff3d0"/>
+  <!-- Herodian-style oil lamp -->
+  <path d="M52 86 C52 74 74 70 92 70 C108 70 118 74 126 78 L146 76 C152 76 154 84 148 88 L128 92 C120 98 108 102 92 102 C70 102 52 98 52 86 Z" fill="url(#gold)"/>
+  <ellipse cx="90" cy="80" rx="9" ry="4" fill="#3a2d1c"/>
+  <path d="M60 94 Q92 104 124 94" fill="none" stroke="#7a5420" stroke-width="1.5"/>
+  <text x="100" y="146" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700" letter-spacing="3" fill="#f5ecd9">VSC</text>
+  <text x="100" y="165" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="8" letter-spacing="1.3" fill="#c8973a">THE HISTORICAL JESUS</text>
 </svg>
