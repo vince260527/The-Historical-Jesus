@@ -1,178 +1,159 @@
- media:
-    input: images
-    output: /images
+# Pages CMS configuration (https://pagescms.org)
+# Sign in at https://app.pagescms.org with GitHub and open this repository
+# to edit entries, news, and images through a web form.
+media:
+  input: images
+  output: /images
 
-  content:
-    - name: entries
-      label: Evidence entries
-      type: file
-      path: data/entries.json
-      format: json
-      list: true
-      fields:
-        - name: section
-          label: Section
-          type: select
-          options:
-            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
-      format: json
-      list: true
-      fields:
-        - name: section
-          label: Section
-          type: select
-          options:
-            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
-        - name: title
-          label: Title
-          type: string
+content:
+  - name: entries
+    label: Evidence entries
+    type: file
+    path: data/entries.json
+    format: json
+    list: true
+    fields:
+      - name: section
+        label: Section
+        type: select
+        options:
+          values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts, Shroud of Turin & Relics, Ark of the Covenant, Hebrew Bible Archaeology]
+      - name: title
+        label: Title
+        type: string
+      - name: badge
+        label: Scholarly status
+        type: select
+        options:
+          values: [Widely accepted, Debated, Context]
+      - name: meta
+        label: Author / date / location line
+        type: string
+      - name: summary
+        label: Summary
+        type: text
+      - name: significance
+        label: Significance
+        type: text
+      - name: image
+        label: Image (optional)
+        type: image
+      - name: imageAlt
+        label: Image description (for screen readers)
+        type: string
+      - name: credit
+        label: Photo credit and license
+        type: string
+      - name: creditUrl
+        label: Photo source link
+        type: string
 
-  content:
-    - name: entries
-      label: Evidence entries
-      type: file
-      path: data/entries.json
-      format: json
-      list: true
-      fields:
-        - name: section
-          label: Section
-          type: select
-          options:
-        - name: section
-          label: Section
-          type: select
-          options:
-            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
-        - name: title
-      type: file
-      path: data/entries.json
-      format: json
-      list: true
-      fields:
-        - name: section
-          label: Section
-          type: select
-          options:
-            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
-        - name: section
-          label: Section
-          type: select
-          options:
-          type: select
-          options:
-            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
-        - name: title
-          label: Title
-          type: string
-          type: select
-          options:
-            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
-        - name: title
-          label: Title
-          type: string
-        - name: badge
-      format: json
-      list: true
-      fields:
-        - name: section
-          label: Section
-          type: select
-          options:
-            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
-        - name: title
-          label: Title
-          type: select
-          options:
-            values: [Non-Christian Writers, Archaeology, Manuscripts, Earliest Christian Texts]
-        - name: title
-          label: Title
-          type: string
-        - name: badge
-          label: Scholarly status
-          type: select
-          options:
-            values: [Widely accepted, Debated, Context]
-        - name: meta
-          label: Author / date / location line
-          type: string
-        - name: summary
-          label: Summary
-          type: text
-        - name: significance
-          label: Significance
-          type: text
-        - name: image
-          label: Image (optional)
-          type: image
-        - name: imageAlt
-          label: Image description (for screen readers)
-          type: string
-        - name: credit
-          label: Photo credit and license
-          type: string
-        - name: creditUrl
-          label: Photo source link
-          type: string
+  - name: news
+    label: News articles
+    type: file
+    path: data/news.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Headline
+        type: string
+      - name: outlet
+        label: Outlet (e.g. Fox News)
+        type: string
+      - name: date
+        label: Publication date
+        type: date
+      - name: url
+        label: Link
+        type: string
+      - name: summary
+        label: Short summary
+        type: text
 
-    - name: news
-      label: News articles
-      type: file
-      path: data/news.json
-      format: json
-      list: true
-      fields:
-        - name: title
-          label: Headline
-          type: string
-        - name: outlet
-          label: Outlet (e.g. Fox News)
-          type: string
-        - name: date
-          label: Publication date
-          type: date
-        - name: url
-          label: Link
-          type: string
-        - name: summary
-   - name: site
-      label: Newsletter, donations & sponsors
-      type: file
-      path: data/site.json
-      format: json
-      fields:
-        - name: newsletterUrl
-          label: Buttondown signup link (e.g. https://buttondown.com/yourname). Leave blank to hide.
-          type: string
-        - name: newsletterBlurb
-          label: Newsletter description
-          type: text
-        - name: donationUrl
-          label: Donation link (Buy Me a Coffee, Ko-fi, GitHub Sponsors…). Leave blank to hide.
-          type: string
-        - name: donationBlurb
-          label: Donation description
-          type: text
-        - name: sponsorContact
-          label: Sponsorship contact (email or link). Leave blank to hide.
-          type: string
-        - name: sponsors
-          label: Sponsors
-          type: object
-          list: true
-          fields:
-            - name: name
-              label: Sponsor name
-              type: string
-            - name: url
-              label: Website link
-              type: string
-            - name: logo
-              label: Logo (optional)
-              type: image
-            - name: blurb
-              label: Short description (optional)
-              type: string
-       
-          label: Short summary
-          type: text
+  - name: videos
+    label: Videos
+    type: file
+    path: data/videos.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Video title
+        type: string
+      - name: channel
+        label: Channel / source
+        type: string
+      - name: topic
+        label: Topic (used for the filter buttons)
+        type: select
+        options:
+          values: [Jesus & the Gospels, Shroud of Turin, Ark of the Covenant, Hebrew Bible Archaeology]
+      - name: youtubeId
+        label: "YouTube video ID (the part after watch?v= in the link, e.g. dQw4w9WgXcQ)"
+        type: string
+      - name: thumbnail
+        label: Thumbnail picture (optional; save it from https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg)
+        type: image
+      - name: description
+        label: Short description
+        type: text
+
+  - name: site
+    label: Site settings (newsletter, donations, sponsors, questionnaire, comments)
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: newsletterUrl
+        label: Buttondown signup link (e.g. https://buttondown.com/yourname). Leave blank to hide.
+        type: string
+      - name: newsletterBlurb
+        label: Newsletter description
+        type: text
+      - name: donationUrl
+        label: Donation link (Buy Me a Coffee, Ko-fi, GitHub Sponsors…). Leave blank to hide.
+        type: string
+      - name: donationBlurb
+        label: Donation description
+        type: text
+      - name: sponsorContact
+        label: Sponsor/advertising contact (email or link). Leave blank to hide.
+        type: string
+      - name: sponsors
+        label: Sponsors, advertisements & affiliate/reseller links
+        type: object
+        list: true
+        fields:
+          - name: type
+            label: Type
+            type: select
+            options:
+              values: [Sponsor, Christian University / College, Bible School / Course, Study Bible / Bible Website, Advertisement, Affiliate / reseller]
+          - name: name
+            label: Sponsor name
+            type: string
+          - name: url
+            label: Website link
+            type: string
+          - name: logo
+            label: Logo (optional)
+            type: image
+          - name: blurb
+            label: Short description (optional)
+            type: string
+      - name: surveyUrl
+        label: Questionnaire link ("Also from VSC" box). Leave blank to hide.
+        type: string
+      - name: surveyTitle
+        label: Questionnaire headline
+        type: string
+      - name: surveyBlurb
+        label: Questionnaire description
+        type: text
+      - name: surveyButton
+        label: Questionnaire button text
+        type: string
+      - name: turnstileSiteKey
+        label: Cloudflare Turnstile site key (turns on comments and the Advertise form). Leave blank to keep them off.
+        type: string
